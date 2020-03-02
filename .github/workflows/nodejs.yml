@@ -1,9 +1,13 @@
 name: AIO App CI
 
-on: [push]
+on: [push, pull_request, release]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node_version: ['12']
+        os: [macOS-10.14]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
