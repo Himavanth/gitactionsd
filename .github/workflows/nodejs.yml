@@ -9,6 +9,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup CLI
         uses: sandeep-paliwal/aio-cli-setup@0.0.2
+      - name: npm install
+        run: npm i
       - name: Build
         uses: sandeep-paliwal/aio-app@0.0.3
         with:
